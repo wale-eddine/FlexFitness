@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>FLEX | My Account</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link href="../css/style.css" rel="stylesheet">
+</head>
+<body>
+
+<!-- Top Bar -->
+<div class="top-bar">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <span><i class="fas fa-phone-alt mr-2"></i> (xxx) xxx-xxx-xxx</span>
+        <span class="ml-3"><i class="fas fa-envelope mr-2"></i> info@flexfitness.com</span>
+      </div>
+      <div class="col-md-6 text-right">
+        <a href="#"><i class="fas fa-user mr-1"></i> My Account</a>
+        <a href="cart.html" target="_blank"><i class="fas fa-shopping-cart mr-1"></i> Cart (0)</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Header -->
+<header class="main-header">
+  <nav class="navbar navbar-expand-lg navbar-light">
+    <div class="container">
+      <a class="navbar-brand" href="../index.html">FLEX<span>FITNESS</span></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="../index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../index.html#features">Features</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="technology.html">Technology</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../index.html#reviews">Reviews</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="account.html#contact">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<!-- Account Section -->
+<section class="section bg-gray">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-10">
+        <div class="row">
+          <!-- Login Form -->
+          <div class="col-md-6 mb-4 mb-md-0">
+            <div class="product-card h-100">
+              <div class="product-details p-4">
+                <h3 class="product-title text-center mb-4">LOGIN</h3>
+                
+                <form>
+                  <div class="form-group">
+                    <label for="login-email">Email Address</label>
+                    <input type="email" class="form-control" id="login-email" required>
+                  </div>
+                  
+                  <div class="form-group">
+                    <label for="login-password">Password</label>
+                    <input type="password" class="form-control" id="login-password" required>
+                  </div>
+                  
+                  <div class="d-flex justify-content-between align-items-center mb-4">
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" id="remember-me">
+                      <label class="form-check-label" for="remember-me">
+                        Remember me
+                      </label>
+                    </div>
+                    <a href="#" class="text-primary">Forgot password?</a>
+                  </div>
+                  
+                  <button type="submit" class="btn btn-primary w-100">LOGIN</button>
+                  
+                  <div class="text-center mt-4">
+                    <p>Or login with</p>
+                    <div class="d-flex justify-content-center">
+                      <a href="#" class="btn btn-outline-secondary mx-2">
+                        <i class="fab fa-google"></i>
+                      </a>
+                      <a href="#" class="btn btn-outline-secondary mx-2">
+                        <i class="fab fa-facebook-f"></i>
+                      </a>
+                      <a href="#" class="btn btn-outline-secondary mx-2">
+                        <i class="fab fa-apple"></i>
+                      </a>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Register Form -->
+          <div class="col-md-6">
+            <div class="product-card h-100">
+              <div class="product-details p-4">
+                <h3 class="product-title text-center mb-4">CREATE ACCOUNT</h3>
+                
+                <form>
+                  <div class="form-group">
+                    <label for="register-name">Full Name</label>
+                    <input type="text" class="form-control" id="register-name" required>
+                  </div>
+                  
+                  <div class="form-group">
+                    <label for="register-email">Email Address</label>
+                    <input type="email" class="form-control" id="register-email" required>
+                  </div>
+                  
+                  <div class="form-group">
+                    <label for="register-password">Password</label>
+                    <input type="password" class="form-control" id="register-password" required>
+                  </div>
+                  
+                  <div class="form-group">
+                    <label for="register-confirm-password">Confirm Password</label>
+                    <input type="password" class="form-control" id="register-confirm-password" required>
+                  </div>
+                  
+                  <div class="form-check mb-4">
+                    <input class="form-check-input" type="checkbox" id="terms" required>
+                    <label class="form-check-label" for="terms">
+                      I agree to the <a href="#" class="text-primary">Terms & Conditions</a>
+                    </label>
+                  </div>
+                  
+                  <button type="submit" class="btn btn-primary w-100">CREATE ACCOUNT</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Member Benefits -->
+        <div class="mt-5">
+          <h2 class="section-title text-center">MEMBER BENEFITS</h2>
+          
+          <div class="row mt-4">
+            <div class="col-md-4 mb-4">
+              <div class="text-center">
+                <div class="feature-icon">
+                  <i class="fas fa-tag"></i>
+                </div>
+                <h4>EXCLUSIVE DISCOUNTS</h4>
+                <p>Access to member-only sales and special pricing on premium equipment.</p>
+              </div>
+            </div>
+            
+            <div class="col-md-4 mb-4">
+              <div class="text-center">
+                <div class="feature-icon">
+                  <i class="fas fa-truck"></i>
+                </div>
+                <h4>FREE SHIPPING</h4>
+                <p>Enjoy free shipping on all orders over $100 with your account.</p>
+              </div>
+            </div>
+            
+            <div class="col-md-4 mb-4">
+              <div class="text-center">
+                <div class="feature-icon">
+                  <i class="fas fa-history"></i>
+                </div>
+                <h4>ORDER TRACKING</h4>
+                <p>Easily track your orders and view your purchase history.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-4 mb-5">
+        <a href="#" class="footer-logo">FLEX<span>FITNESS</span></a>
+        <p class="footer-text">Premium fitness equipment for home and commercial use. Transform your workout experience with cutting-edge technology and expert design.</p>
+        <div class="social-links">
+          <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+      
+      <div class="col-lg-2 col-md-4 mb-4">
+        <h4 class="footer-heading">PRODUCTS</h4>
+        <ul class="footer-links">
+          <li><a href="#">Cardio Equipment</a></li>
+          <li><a href="#">Strength Training</a></li>
+          <li><a href="#">Connected Fitness</a></li>
+          <li><a href="#">Accessories</a></li>
+          <li><a href="#">Commercial Solutions</a></li>
+        </ul>
+      </div>
+      
+      <div class="col-lg-2 col-md-4 mb-4">
+        <h4 class="footer-heading">SUPPORT</h4>
+        <ul class="footer-links">
+          <li><a href="#">Contact Us</a></li>
+          <li><a href="#">FAQs</a></li>
+          <li><a href="#">Shipping & Returns</a></li>
+          <li><a href="#">Warranty</a></li>
+          <li><a href="technology.html#partners">Partners</a></li>
+        </ul>
+      </div>
+      
+      <div class="col-lg-4 col-md-4 mb-4">
+        <h4 class="footer-heading" id="contact">CONTACT US</h4>
+        <ul class="footer-links">
+          <li><i class="fas fa-map-marker-alt mr-2"></i> Address</li>
+          <li><i class="fas fa-phone-alt mr-2"></i> (xxx) xxx-xxx-xxx</li>
+          <li><i class="fas fa-envelope mr-2"></i> info@flexfitness.com</li>
+          <li><i class="fas fa-clock mr-2"></i> Mon-Fri: 9am-6pm, Sat: 10am-4pm</li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="copyright">
+      <p>&copy; 2025 FLEX FITNESS. All Rights Reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- Scroll to Top Button -->
+<button id="scrollToTopBtn" class="scroll-top-btn">
+  <i class="fas fa-arrow-up"></i>
+</button>
+
+<!-- JavaScript -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+<script>
+  // Scroll to Top Button Functionality
+  const scrollToTopBtn = document.getElementById("scrollToTopBtn");
+  
+  // Show button when user scrolls down 300px
+  window.addEventListener("scroll", function() {
+    if (window.pageYOffset > 300) {
+      scrollToTopBtn.classList.add("visible");
+    } else {
+      scrollToTopBtn.classList.remove("visible");
+    }
+  });
+  
+  // Scroll to top when button is clicked
+  scrollToTopBtn.addEventListener("click", function() {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>FLEX | Shopping Cart</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link href="../css/style.css" rel="stylesheet">
+</head>
+<body>
+
+<!-- Top Bar -->
+<div class="top-bar">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <span><i class="fas fa-phone-alt mr-2"></i> (xxx) xxx-xxx-xxx</span>
+        <span class="ml-3"><i class="fas fa-envelope mr-2"></i> info@flexfitness.com</span>
+      </div>
+      <div class="col-md-6 text-right">
+        <a href="account.html" target="_blank"><i class="fas fa-user mr-1"></i> My Account</a>
+        <a href="#"><i class="fas fa-shopping-cart mr-1"></i> Cart (0)</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Header -->
+<header class="main-header">
+  <nav class="navbar navbar-expand-lg navbar-light">
+    <div class="container">
+      <a class="navbar-brand" href="../index.html">FLEX<span>FITNESS</span></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="../index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../index.html#features">Features</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="technology.html">Technology</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../index.html#reviews">Reviews</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="cart.html#contact">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<!-- Cart Section -->
+<section class="section">
+  <div class="container">
+    <h2 class="section-title text-center">YOUR SHOPPING CART</h2>
+    
+    <!-- Empty Cart Message -->
+    <div class="text-center py-5" id="empty-cart">
+      <div class="feature-icon mb-4">
+        <i class="fas fa-shopping-cart"></i>
+      </div>
+      <h3>YOUR CART IS EMPTY</h3>
+      <p class="mb-4">Looks like you haven't added any products to your cart yet.</p>
+      <a href="../index.html#products" class="btn btn-primary">EXPLORE PRODUCTS</a>
+    </div>
+    
+    <!-- Cart Items (Hidden by default, would be shown when items are added) -->
+    <div id="cart-items" style="display: none;">
+      <div class="row">
+        <div class="col-lg-8">
+          <!-- Cart Item 1 -->
+          <div class="product-card mb-4">
+            <div class="product-details p-0">
+              <div class="d-flex">
+                <div style="width: 150px; height: 150px; overflow: hidden;">
+                  <img src="../media/peloton-bike.jpg" alt="Peloton Bike" class="img-fluid">
+                </div>
+                <div class="p-3 flex-grow-1">
+                  <div class="d-flex justify-content-between align-items-start">
+                    <h4>PELOTON BIKE+</h4>
+                    <button class="btn btn-sm text-danger"><i class="fas fa-times"></i></button>
+                  </div>
+                  <div class="product-price mb-2">$2,495</div>
+                  <div class="d-flex align-items-center mt-3">
+                    <button class="btn btn-sm btn-outline-secondary"><i class="fas fa-minus"></i></button>
+                    <input type="number" class="form-control mx-2" style="width: 60px;" value="1" min="1">
+                    <button class="btn btn-sm btn-outline-secondary"><i class="fas fa-plus"></i></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Cart Item 2 -->
+          <div class="product-card mb-4">
+            <div class="product-details p-0">
+              <div class="d-flex">
+                <div style="width: 150px; height: 150px; overflow: hidden;">
+                  <img src="../media/concept2-rower.jpg" alt="Concept2 RowErg" class="img-fluid">
+                </div>
+                <div class="p-3 flex-grow-1">
+                  <div class="d-flex justify-content-between align-items-start">
+                    <h4>CONCEPT2 ROWERG</h4>
+                    <button class="btn btn-sm text-danger"><i class="fas fa-times"></i></button>
+                  </div>
+                  <div class="product-price mb-2">$990</div>
+                  <div class="d-flex align-items-center mt-3">
+                    <button class="btn btn-sm btn-outline-secondary"><i class="fas fa-minus"></i></button>
+                    <input type="number" class="form-control mx-2" style="width: 60px;" value="1" min="1">
+                    <button class="btn btn-sm btn-outline-secondary"><i class="fas fa-plus"></i></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Continue Shopping Button -->
+          <div class="d-flex justify-content-between mt-4">
+            <a href="../index.html#products" class="btn btn-outline-secondary">
+              <i class="fas fa-arrow-left mr-2"></i> CONTINUE SHOPPING
+            </a>
+            <button class="btn btn-outline-danger">
+              <i class="fas fa-trash mr-2"></i> CLEAR CART
+            </button>
+          </div>
+        </div>
+        
+        <!-- Order Summary -->
+        <div class="col-lg-4">
+          <div class="product-card">
+            <div class="product-details p-4">
+              <h3 class="product-title mb-4">ORDER SUMMARY</h3>
+              
+              <div class="d-flex justify-content-between mb-2">
+                <span>Subtotal (2 items)</span>
+                <span>$3,485.00</span>
+              </div>
+              
+              <div class="d-flex justify-content-between mb-2">
+                <span>Shipping</span>
+                <span>FREE</span>
+              </div>
+              
+              <div class="d-flex justify-content-between mb-2">
+                <span>Tax</span>
+                <span>$278.80</span>
+              </div>
+              
+              <hr>
+              
+              <div class="d-flex justify-content-between mb-4">
+                <strong>Total</strong>
+                <div class="product-price">$3,763.80</div>
+              </div>
+              
+              <!-- Promo Code -->
+              <div class="form-group">
+                <label for="promo-code">Promo Code</label>
+                <div class="input-group">
+                  <input type="text" class="form-control" id="promo-code" placeholder="Enter code">
+                  <div class="input-group-append">
+                    <button class="btn btn-outline-secondary" type="button">APPLY</button>
+                  </div>
+                </div>
+              </div>
+              
+              <button class="btn btn-primary w-100 mt-3">PROCEED TO CHECKOUT</button>
+              
+              <div class="text-center mt-4">
+                <p class="mb-2">WE ACCEPT</p>
+                <div class="d-flex justify-content-center">
+                  <i class="fab fa-cc-visa mx-2 fa-2x"></i>
+                  <i class="fab fa-cc-mastercard mx-2 fa-2x"></i>
+                  <i class="fab fa-cc-amex mx-2 fa-2x"></i>
+                  <i class="fab fa-cc-paypal mx-2 fa-2x"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- You May Also Like -->
+<section class="section bg-gray">
+  <div class="container">
+    <h2 class="section-title text-center">YOU MAY ALSO LIKE</h2>
+    
+    <div class="row mt-4">
+      <!-- Product 1 -->
+      <div class="col-lg-4 col-md-6">
+        <div class="product-card">
+          <div class="product-image-container">
+            <img src="../media/mirror.jpg" alt="Mirror" class="product-image">
+          </div>
+          <div class="product-details">
+            <h3 class="product-title">MIRROR</h3>
+            <div class="product-price">$1,495</div>
+            <p>Interactive home gym disguised as a sleek, full-length mirror.</p>
+            <a href="#" class="btn btn-primary mt-2 w-100">VIEW DETAILS</a>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Product 2 -->
+      <div class="col-lg-4 col-md-6">
+        <div class="product-card">
+          <div class="product-image-container">
+            <img src="../media/tonal.jpg" alt="Tonal" class="product-image">
+          </div>
+          <div class="product-details">
+            <h3 class="product-title">TONAL</h3>
+            <div class="product-price">$2,995</div>
+            <p>Revolutionary digital weight system with AI coaching for strength training.</p>
+            <a href="#" class="btn btn-primary mt-2 w-100">VIEW DETAILS</a>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Product 3 -->
+      <div class="col-lg-4 col-md-6">
+        <div class="product-card">
+          <div class="product-image-container">
+            <img src="../media/hydrow-rower.jpg" alt="Hydrow Rower" class="product-image">
+          </div>
+          <div class="product-details">
+            <h3 class="product-title">HYDROW ROWER</h3>
+            <div class="product-price">$2,495</div>
+            <p>Immersive rowing experience with live outdoor reality workouts.</p>
+            <a href="#" class="btn btn-primary mt-2 w-100">VIEW DETAILS</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-4 mb-5">
+        <a href="#" class="footer-logo">FLEX<span>FITNESS</span></a>
+        <p class="footer-text">Premium fitness equipment for home and commercial use. Transform your workout experience with cutting-edge technology and expert design.</p>
+        <div class="social-links">
+          <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+      
+      <div class="col-lg-2 col-md-4 mb-4">
+        <h4 class="footer-heading">PRODUCTS</h4>
+        <ul class="footer-links">
+          <li><a href="#">Cardio Equipment</a></li>
+          <li><a href="#">Strength Training</a></li>
+          <li><a href="#">Connected Fitness</a></li>
+          <li><a href="#">Accessories</a></li>
+          <li><a href="#">Commercial Solutions</a></li>
+        </ul>
+      </div>
+      
+      <div class="col-lg-2 col-md-4 mb-4">
+        <h4 class="footer-heading">SUPPORT</h4>
+        <ul class="footer-links">
+          <li><a href="#">Contact Us</a></li>
+          <li><a href="#">FAQs</a></li>
+          <li><a href="#">Shipping & Returns</a></li>
+          <li><a href="#">Warranty</a></li>
+          <li><a href="technology.html#partners">Partners</a></li>
+        </ul>
+      </div>
+      
+      <div class="col-lg-4 col-md-4 mb-4">
+        <h4 class="footer-heading" id="contact">CONTACT US</h4>
+        <ul class="footer-links">
+          <li><i class="fas fa-map-marker-alt mr-2"></i> Address</li>
+          <li><i class="fas fa-phone-alt mr-2"></i> (xxx) xxx-xxx-xxx</li>
+          <li><i class="fas fa-envelope mr-2"></i> info@flexfitness.com</li>
+          <li><i class="fas fa-clock mr-2"></i> Mon-Fri: 9am-6pm, Sat: 10am-4pm</li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="copyright">
+      <p>&copy; 2025 FLEX FITNESS. All Rights Reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- Scroll to Top Button -->
+<button id="scrollToTopBtn" class="scroll-top-btn">
+  <i class="fas fa-arrow-up"></i>
+</button>
+
+<!-- JavaScript -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+<script>
+  // Scroll to Top Button Functionality
+  const scrollToTopBtn = document.getElementById("scrollToTopBtn");
+  
+  // Show button when user scrolls down 300px
+  window.addEventListener("scroll", function() {
+    if (window.pageYOffset > 300) {
+      scrollToTopBtn.classList.add("visible");
+    } else {
+      scrollToTopBtn.classList.remove("visible");
+    }
+  });
+  
+  // Scroll to top when button is clicked
+  scrollToTopBtn.addEventListener("click", function() {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  });
+</script>
+
+</body>
+</html>
